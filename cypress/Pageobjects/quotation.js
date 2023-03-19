@@ -71,6 +71,12 @@ verifyReset()
     cy.get('#resetquote').click()
 }
 
+calculatePremium()
+{ 
+    cy.get('.btn-default').click()
+    cy.get('#calculatedpremium').should('contain.text','Premium: £1000')
+}
+
 }
 
 export default quotation;
